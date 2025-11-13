@@ -1,0 +1,72 @@
+.users-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.user-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.user-form input,
+.user-form select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.crear-btn {
+  background-color: #d50000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.crear-btn:hover {
+  background-color: #b71c1c;
+}
+
+.tabla-usuarios {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-usuarios th,
+.tabla-usuarios td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.editar-btn,
+.eliminar-btn,
+.guardar-btn {
+  margin-right: 0.5rem;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.editar-btn {
+  background-color: #1976d2;
+  color: white;
+}
+
+.eliminar-btn {
+  background-color: #d50000;
+  color: white;
+}
+
+.guardar-btn {
+  background-color: #2e7d32;
+  color: white;
+}
