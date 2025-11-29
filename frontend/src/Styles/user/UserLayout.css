@@ -1,0 +1,14 @@
+.user-layout {
+  display: flex;
+}
+
+.user-content {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  min-height: 100vh;
+  background: #f5f6fa;
+}
+
+.user-main {
+  padding: 2rem;
+}

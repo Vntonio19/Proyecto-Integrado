@@ -1,12 +1,14 @@
 import React from "react";
-import Navbar from "./Navbar";
-import "./Static/DashboardAdmin.css";
+import Navbar from "../components/Navbar";
 
 export default function AdminLayout({ children, logout }) {
   return (
     <div className="admin-layout">
       <Navbar logout={logout} />
-      <div className="admin-content">{children}</div>
+
+      <div className="admin-content">
+        {children}
+      </div>
     </div>
   );
 }

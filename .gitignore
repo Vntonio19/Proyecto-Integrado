@@ -1,4 +1,16 @@
+# Python
 __pycache__/
-
+*.pyc
 venv/
+env/
+*.sqlite3
+
+# Node (si hubiera frontend)
+node_modules/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Entorno
 .env

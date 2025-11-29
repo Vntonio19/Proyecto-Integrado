@@ -1,0 +1,95 @@
+.user-sidebar {
+  width: 260px;
+  background-color: #c00000;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user-sidebar-header {
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 1rem;
+}
+
+.logo-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: white;
+  color: #c00000;
+  margin: 0 auto;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.user-sidebar-header h3 {
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+}
+
+.user-sidebar-header p {
+  margin: 0;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.user-sidebar-menu ul {
+  list-style: none;
+  margin: 1.5rem 0;
+  padding: 0;
+}
+
+.user-sidebar-menu li {
+  margin-bottom: 0.75rem;
+}
+
+.user-sidebar-menu a {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.user-sidebar-menu li.active a,
+.user-sidebar-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.logout-btn {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.user-sidebar-footer {
+  text-align: center;
+  opacity: 0.75;
+  font-size: 0.8rem;
+}

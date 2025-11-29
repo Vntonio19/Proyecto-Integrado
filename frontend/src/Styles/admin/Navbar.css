@@ -1,0 +1,96 @@
+/* SIDEBAR GENERAL */
+.admin-sidebar {
+  width: 250px;
+  height: 100vh;
+  background: #b30000; /* Rojo INACAP */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* PERFIL */
+.admin-profile {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.admin-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid #ffffffbd;
+}
+
+.admin-profile h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.admin-profile p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* MENÚ */
+.admin-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-menu li {
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  border-radius: 6px;
+}
+
+.admin-menu li:hover {
+  background: #8c0000; /* Rojo más oscuro */
+}
+
+/* TEXTO DEL MENU */
+.admin-menu li span {
+  font-weight: 500;
+}
+
+/* FOOTER */
+.admin-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-config-btn,
+.admin-logout-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #fff;
+  color: #b30000;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  transition: 0.2s ease;
+}
+
+.admin-config-btn:hover,
+.admin-logout-btn:hover {
+  background: #ffe6e6;
+}

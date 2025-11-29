@@ -1,0 +1,90 @@
+/* CONTENEDOR PRINCIPAL */
+.admin-dashboard-page {
+  padding: 30px 40px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* TITULO */
+.admin-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #b30000;
+}
+
+.subtitle {
+  margin-top: 3px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* GRID DE OPCIONES */
+.system-options {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* TARJETAS */
+.option-card {
+  background: #ffffff;
+  padding: 25px 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+  border-left: 5px solid #b30000;
+  transition: 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* HOVER PRO */
+.option-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* ICONOS */
+.option-icon {
+  font-size: 2.2rem;
+  color: #b30000;
+  margin-bottom: 5px;
+}
+
+/* TITULO DE TARJETA */
+.option-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* DESCRIPCIÓN */
+.option-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* BOTÓN */
+.btn {
+  margin-top: auto;
+  background: #b30000;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+/* BOTÓN HOVER */
+.btn:hover {
+  background: #8c0000;
+}
+
+/* ANIMACIÓN SUAVE */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

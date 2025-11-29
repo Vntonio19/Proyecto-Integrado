@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Static/Login.css";
-import logo from "../imagenes/logoinacap.png";     
-import fondo from "../imagenes/campus.png";   
+import "../Styles/user/Login.css"; // <-- Import correcto
+import logo from "../imagenes/logoinacap.png";
+import fondo from "../imagenes/campus.png";
 
 export default function Login({ onLogin }) {
   const [username, setUsername] = useState("");
@@ -19,13 +19,17 @@ export default function Login({ onLogin }) {
         password,
       });
 
+      // === GUARDAR SESIÓN ===
       localStorage.setItem("token", res.data.access);
       localStorage.setItem("username", res.data.username);
       localStorage.setItem("role", res.data.role);
 
+      // === ACTUALIZAR ESTADO GLOBAL ===
       onLogin({ logged: true, role: res.data.role });
+      
     } catch (err) {
-      setError("Credenciales incorrectas");
+      console.error("Error en login:", err);
+      setError("Credenciales incorrectas.");
     }
   };
 
@@ -36,6 +40,7 @@ export default function Login({ onLogin }) {
     >
       <div className="login-form">
         <img src={logo} alt="Logo INACAP" className="login-logo" />
+
         <h3>Ingresa tu cuenta INACAPMail o tu RUT:</h3>
 
         <form onSubmit={handleSubmit}>
@@ -44,12 +49,15 @@ export default function Login({ onLogin }) {
             placeholder="usuario@inacapmail.cl o RUT"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            required
           />
+
           <input
             type="password"
             placeholder="Contraseña"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
 
           <div className="remember">
@@ -57,7 +65,10 @@ export default function Login({ onLogin }) {
             <label htmlFor="remember">Mantener la sesión iniciada</label>
           </div>
 
-          <button type="submit">Iniciar sesión</button>
+          <button type="submit" className="login-btn">
+            Iniciar sesión
+          </button>
+
           {error && <p className="error">{error}</p>}
         </form>
 

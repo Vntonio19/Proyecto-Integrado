@@ -1,0 +1,59 @@
+.page-container {
+  padding: 2rem;
+}
+
+.page-title {
+  color: #c00000;
+  margin-bottom: 1.5rem;
+}
+
+.card-table {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #c00000;
+  color: white;
+}
+
+thead th {
+  padding: 0.8rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+tbody td {
+  padding: 0.7rem 0.8rem;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ESTADOS */
+.estado {
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.estado-aprobada {
+  background: #4caf50;
+  color: white;
+}
+
+.estado-pendiente {
+  background: #ff9800;
+  color: white;
+}
+
+.estado-rechazada {
+  background: #f44336;
+  color: white;
+}
