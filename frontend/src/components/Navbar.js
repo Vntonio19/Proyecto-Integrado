@@ -83,6 +83,12 @@ export default function Navbar({ logout }) {
             <li onClick={() => navigate("/admin/perfil")}>
               <FaUserCircle /> <span>Mi Perfil</span>
             </li>
+            <li onClick={() => navigate("/admin/calendario")}>
+              <FaChartLine /> <span>Calendario</span>
+            </li>
+            <li onClick={() => navigate("/admin/aseo/tareas")}>
+              <FaChartLine /> <span>Tareas de Aseo</span>
+            </li>
           </ul>
         </nav>
 

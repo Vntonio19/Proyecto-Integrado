@@ -1,5 +1,5 @@
 from rest_framework import viewsets, status
-from rest_framework.decorators import api_view, permission_classes
+from rest_framework.decorators import api_view, permission_classes, APIView
 from rest_framework.permissions import AllowAny, IsAdminUser, IsAuthenticated
 from rest_framework.response import Response
 from django.contrib.auth import authenticate
@@ -12,7 +12,8 @@ from .serializers import (
     EspacioSerializer,
     ReservaSerializer,
     NotificacionSerializer,
-    UserProfileSerializer
+    UserProfileSerializer,
+    TareaAseoSerializer,
 )
 
 
@@ -125,3 +126,27 @@ def cambiar_contrasena(request):
     user.save()
 
     return Response({"message": "Contraseña actualizada correctamente"})
+
+
+# ==================== TAREAS DE ASEO ====================
+class TareasAseoView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        tareas = Reserva.objects.filter(
+            estado="APROBADA",
+            requiere_aseo=True,
+            estado_limpieza="PENDIENTE"
+        )
+
+        serializer = TareaAseoSerializer(tareas, many=True)
+        return Response(serializer.data)
+
+    def patch(self, request, tarea_id):
+        try:
+            tarea = Reserva.objects.get(id=tarea_id)
+            tarea.estado_limpieza = "COMPLETADA"
+            tarea.save()
+            return Response({"message": "Limpieza marcada como completada"})
+        except Reserva.DoesNotExist:
+            return Response({"error": "Tarea no encontrada"}, status=404)

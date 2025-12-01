@@ -17,13 +17,15 @@ import OpcionesSistema from "./pages/admin/OpcionesSistema";
 import Reportes from "./pages/admin/Reportes";
 import Seguridad from "./pages/admin/Seguridad";
 import UserProfileAdmin from "./pages/admin/UserProfileAdmin";
-
+import CalendarAdmin from "./pages/admin/CalendarAdmin";
+import TareasAseo from "./pages/aseo/tareas";
 // ===== PAGES USER =====
 import DashboardUser from "./pages/user/DashboardUser";
 import UserProfile from "./pages/user/UserProfile";
 import EspaciosList from "./pages/user/EspaciosList";
 import ReservasList from "./pages/user/ReservasList";
 import NotificacionesList from "./pages/user/NotificacionesList";
+
 
 function App() {
   const [auth, setAuth] = useState({
@@ -65,7 +67,8 @@ function App() {
             <Route path="/admin/reportes" element={<Reportes />} />
             <Route path="/admin/seguridad" element={<Seguridad />} />
             <Route path="/admin/perfil" element={<UserProfileAdmin />} />
-
+            <Route path="/admin/calendario" element={<CalendarAdmin />} />
+            <Route path="/admin/aseo/tareas" element={<TareasAseo />} />
             <Route path="/admin/panel" element={<DashboardAdmin />} />
 
             <Route path="*" element={<Navigate to="/admin/home" />} />

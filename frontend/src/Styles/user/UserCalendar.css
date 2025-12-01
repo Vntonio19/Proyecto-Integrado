@@ -1,0 +1,64 @@
+.user-calendar-container {
+  padding: 2rem;
+}
+
+.user-calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.user-calendar-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.user-calendar-refresh {
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #c00000;
+  color: #fff;
+  font-weight: 600;
+}
+
+.user-calendar-refresh:hover {
+  opacity: 0.9;
+}
+
+.user-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.user-calendar-item {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-size: 14px;
+}
+
+.user-calendar-estado {
+  display: inline-block;
+  margin-top: 0.6rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.user-calendar-estado.pendiente {
+  background-color: #ffe599;
+}
+
+.user-calendar-estado.aprobada {
+  background-color: #b6d7a8;
+}
+
+.user-calendar-estado.rechazada {
+  background-color: #e06666;
+}

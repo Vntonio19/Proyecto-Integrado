@@ -1,0 +1,99 @@
+.aseo-container {
+  padding: 2rem;
+}
+
+.aseo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.aseo-header h2 {
+  font-size: 26px;
+  margin: 0;
+}
+
+.aseo-refresh-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #c00000;
+  color: #fff;
+  font-weight: 600;
+}
+
+.aseo-refresh-btn:hover {
+  opacity: 0.9;
+}
+
+.aseo-error {
+  color: #d32f2f;
+  margin-bottom: 1rem;
+}
+
+.aseo-table-wrapper {
+  overflow-x: auto;
+}
+
+.aseo-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.aseo-table th,
+.aseo-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 14px;
+}
+
+.aseo-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.badge-limpieza {
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-limpieza.pendiente {
+  background-color: #ffe599;
+}
+
+.badge-limpieza.en_proceso {
+  background-color: #9fc5e8;
+}
+
+.badge-limpieza.completada {
+  background-color: #b6d7a8;
+}
+
+.aseo-action-btn {
+  padding: 0.35rem 0.9rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  background-color: #00a050;
+  color: white;
+  font-weight: 600;
+}
+
+.aseo-action-btn:hover {
+  opacity: 0.9;
+}
+
+.aseo-completada {
+  color: #008000;
+  font-weight: 600;
+}

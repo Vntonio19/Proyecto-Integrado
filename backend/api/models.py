@@ -56,3 +56,24 @@ class Profile(models.Model):
 def crear_perfil(sender, instance, created, **kwargs):
     if created:
         Profile.objects.create(user=instance)
+
+
+# ======= MODELO DE TAREAS DE ASEO =======
+class TareaAseo(models.Model):
+    descripcion = models.CharField(max_length=255)
+    fecha_programada = models.DateField()
+    completada = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.descripcion 
+    
+#------- RERSERVAS Y ESPACIOS -------#
+class Reserva(models.Model):
+    sala = models.ForeignKey(Sala, on_delete=models.CASCADE)
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+    fecha = models.DateField()
+    hora_inicio = models.TimeField()
+    hora_fin = models.TimeField()
+    estado = models.CharField(max_length=20)
+    estado_limpieza = models.CharField(max_length=20, default="PENDIENTE")
+    requiere_aseo = models.BooleanField(default=True)

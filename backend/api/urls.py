@@ -8,6 +8,7 @@ from .views import (
     perfil_usuario,
     actualizar_perfil,
     cambiar_contrasena,
+    TareasAseoView,
 )
 
 router = DefaultRouter()
@@ -21,4 +22,6 @@ urlpatterns = [
     path('perfil/', perfil_usuario, name='perfil_usuario'),
     path('perfil/actualizar/', actualizar_perfil, name='actualizar_perfil'),
     path('perfil/cambiar-password/', cambiar_contrasena, name='cambiar_contrasena'),
+    path("aseo/tareas/", TareasAseoView.as_view()),
+
 ]
